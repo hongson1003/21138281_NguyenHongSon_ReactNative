@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess My Number</title>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    .number {
+      width: 15rem;
+      height: 15rem;
+      font-size: 8rem;
+      border-radius: 50%;
+      background: #eee;
+      margin: 0 auto;
+      color: #222;
+    }
+    .score {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guess My Number!</h1>
+  <div class="message">Start guessing...</div>
+  <div class="number">?</div>
+  <div class="score">20</div> <!-- Thêm phần tử score -->
+  <input type="number" class="guess" placeholder="Enter your guess">
+  <button class="again">Again!</button>
+  <script src="script.js"></script>
+</body>
+</html>

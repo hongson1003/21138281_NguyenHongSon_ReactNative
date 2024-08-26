@@ -13,12 +13,16 @@
     "test:#2.p2.t1": "jest --testPathPattern=#2.p2.t1.test.js",
     "test:#3.p2.t1": "jest --testPathPattern=#3.p2.t1.test.js",
     "test:#4.p2.t1": "jest --testPathPattern=#4.p2.t1.test.js",
-    "test:#1.p3.t1": "jest --testPathPattern=#1.p3.t1.test.js"
+    "test:p3": "jest --testPathPattern=p3.test.js",
+    "test:p4": "jest --testPathPattern=resetGame.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jsdom": "^25.0.0"
   }
 }
