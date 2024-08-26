@@ -11,7 +11,9 @@
     "test:#4:p1:t1": "jest --testPathPattern=#4.p1.t1.test.js",
     "test:#1.p2.t1": "jest --testPathPattern=#1.p2.t1.test.js",
     "test:#2.p2.t1": "jest --testPathPattern=#2.p2.t1.test.js",
-    "test:#3.p2.t1": "jest --testPathPattern=#3.p2.t1.test.js"
+    "test:#3.p2.t1": "jest --testPathPattern=#3.p2.t1.test.js",
+    "test:#4.p2.t1": "jest --testPathPattern=#4.p2.t1.test.js",
+    "test:#1.p3.t1": "jest --testPathPattern=#1.p3.t1.test.js"
   },
   "keywords": [],
   "author": "",
