@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:1": "jest --testPathPattern=#1.test.js",
-    "test:2": "jest --testPathPattern=#2.test.js",
-    "test:3": "jest --testPathPattern=#3.test.js"
+    "test:#1:p1:t1": "jest --testPathPattern=#1.p1.t1.test.js",
+    "test:#2:p1:t1": "jest --testPathPattern=#2.p1.t1.test.js",
+    "test:#3:p1:t1": "jest --testPathPattern=#3.p1.t1.test.js"
   },
   "keywords": [],
   "author": "",
