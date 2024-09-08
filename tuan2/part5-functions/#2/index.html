@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Challenge #2</title>
+</head>
+<body>
+  <h1 class="header">Click anywhere on the body to change my color!</h1>
+
+  <script>
+    (function() {
+      // Select the h1 element
+      const header = document.querySelector('.header');
+
+      // Immediately invoked function that runs once
+      console.log('IIFE executed and h1 element selected.');
+
+      // Attach an event listener to the body
+      document.body.addEventListener('click', function() {
+        header.style.color = 'blue';
+      });
+    })();
+  </script>
+</body>
+</html>
