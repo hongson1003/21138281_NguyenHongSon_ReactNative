@@ -1,0 +1,33 @@
+{
+  "id": 1,
+  "name": "Samsung Galaxy S23 Ultra",
+  "price": 11990000,
+  "screen": {
+    "size": "6.8 inches",
+    "type": "Dynamic AMOLED 2X",
+    "resolution": "1440 x 3088 pixels"
+  },
+  "camera": {
+    "rear": {
+      "main": "200 MP",
+      "ultrawide": "12 MP",
+      "telephoto": "10 MP",
+      "periscopeTelephoto": "10 MP"
+    },
+    "front": "12 MP"
+  },
+  "battery": "5000 mAh",
+  "os": "Android 13",
+  "storage": {
+    "ram": "12 GB",
+    "internal": "256 GB"
+  },
+  "features": [
+    "5G support",
+    "Fingerprint (under display)",
+    "Fast charging 45W"
+  ],
+  "rating": 5,
+  "reviews": 100,
+  "oldPrice": 120000
+}
