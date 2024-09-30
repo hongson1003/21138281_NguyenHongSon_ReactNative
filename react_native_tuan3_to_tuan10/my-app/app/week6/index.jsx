@@ -2,6 +2,7 @@ import { FlatList, Text, View } from 'react-native';
 import productJson from '@/assets/data/product.json';
 import { useState } from 'react';
 import ProductItem from '../../components/week6/productItem';
+import { Link } from 'expo-router';
 
 const Home = () => {
   const [data, setData] = useState(productJson);
@@ -11,6 +12,9 @@ const Home = () => {
         <Text className="text-[20px]">⇦</Text>
         <Text className="text-[20px]">Chat</Text>
         <Text className="text-[20px]">🛒</Text>
+        <Link href={'/week6/usb'} className="text-[20px]">
+          Mua USB
+        </Link>
       </View>
       <View className="p-2 border-b border-gray-500">
         <Text className="text-center">
