@@ -1,17 +1,22 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
-import SamsungImage from "@/assets/images/samsung.png";
-import data from "./samsung.json";
-import Star from "@/assets/images/star.png";
-import InfoImage from "@/assets/images/info.png";
-import RightIconImage from "@/assets/images/right-icon.png";
+import { View, Text, Image, TouchableOpacity, Pressable } from 'react-native';
+import SamsungImage from '@/assets/images/samsung.png';
+import dataJSON from '../../app/week5/samsung.json';
+import Star from '@/assets/images/star.png';
+import InfoImage from '@/assets/images/info.png';
+import RightIconImage from '@/assets/images/right-icon.png';
+import { useNavigation } from 'expo-router';
+import { useState } from 'react';
 
 const SamsungScreen = () => {
+  const navigation = useNavigation();
+  const [data, setData] = useState(dataJSON);
+
   return (
     <View className="flex-1 p-2">
       <View className="w-full items-center bg-transparent">
         <Image
           source={SamsungImage}
-          style={{ width: "200px", height: "300px" }}
+          style={{ width: '200px', height: '300px' }}
         />
       </View>
       <Text className="font-bold text-lg">{data.name}</Text>
@@ -20,7 +25,7 @@ const SamsungScreen = () => {
           <Image
             key={index}
             source={Star}
-            style={{ width: "20px", height: "20px" }}
+            style={{ width: '20px', height: '20px' }}
           />
         ))}
         <Text className="font-medium">(Xem {data.reviews} đánh giá)</Text>
@@ -42,7 +47,15 @@ const SamsungScreen = () => {
         />
       </View>
 
-      <TouchableOpacity className="w-full text-center bg-green-300 p-2 rounded-md mt-2">
+      <TouchableOpacity
+        className="w-full text-center bg-green-300 p-2 rounded-md mt-2"
+        onPress={() =>
+          navigation.navigate('Detail', {
+            data: data,
+            setData: setData,
+          })
+        }
+      >
         <View className="flex-row justify-center gap-2">
           <Text className="font-bold">4 màu - chọn màu</Text>
           <Image
@@ -55,13 +68,25 @@ const SamsungScreen = () => {
         </View>
       </TouchableOpacity>
 
-      <View className="flex-1 justify-end">
-        <TouchableOpacity
-          className="bg-orange-400 py-5 rounded-md 
+      <View className="flex-1 my-2">
+        <Text className="font-bold">Màu đã chọn</Text>
+        <View className="flex-1 items-center justify-center bg-gray-300 mt-2">
+          <View
+            className="w-8 h-8 rounded-md"
+            style={{
+              backgroundColor: data.color,
+            }}
+          />
+        </View>
+      </View>
+
+      <View className="justify-end">
+        <Pressable
+          className="bg-orange-400 py-2 rounded-md 
         items"
         >
           <Text className="font-bold text-center">Chọn mua</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
     </View>
   );

@@ -29,5 +29,6 @@
   ],
   "rating": 5,
   "reviews": 100,
-  "oldPrice": 120000
+  "oldPrice": 120000,
+  "colors": ["green", "black", "white", "blue"]
 }

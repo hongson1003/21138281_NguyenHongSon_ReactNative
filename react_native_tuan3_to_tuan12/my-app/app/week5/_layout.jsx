@@ -1,29 +1,12 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NativeWindStyleSheet } from "nativewind";
-import { NavigationContainer } from "@react-navigation/native";
-import { Text, View } from "react-native";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { NativeWindStyleSheet } from 'nativewind';
+import DetailSamsung from '../../components/week5/detail';
+import SamsungScreen from '../../components/week5/samsung';
 
 NativeWindStyleSheet.setOutput({
-  default: "native",
+  default: 'native',
 });
-
-// Home screen component
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-
-// Settings screen component
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
 
 const Tab = createBottomTabNavigator();
 
@@ -31,8 +14,20 @@ export default function Layout() {
   return (
     <NavigationContainer independent={true}>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen
+          name="Home"
+          component={SamsungScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Tab.Screen
+          name="Detail"
+          component={DetailSamsung}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );

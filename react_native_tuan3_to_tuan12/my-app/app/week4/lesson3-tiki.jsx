@@ -91,7 +91,7 @@ const Lesson3Tiki = () => {
       <View className="flex-row gap-2">
         <Text>Bạn có phiếu quà tặng Tiki ?</Text>
         <TouchableOpacity onPress={() => Linking.openURL("https://tiki.vn/")}>
-          <Text style={{ color: "blue" }}>Tiki.vn</Text>
+          <Text className="text-blue-500">Tiki.vn</Text>
         </TouchableOpacity>
       </View>
       <View className="flex-row gap-2 items-center justify-between">
