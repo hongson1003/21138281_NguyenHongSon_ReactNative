@@ -31,7 +31,7 @@ const Usb = () => {
 
   return (
     <View className="flex-1">
-      <View className="flex-row justify-between bg-blue-200 p-2">
+      <View className="flex-row justify-between bg-blue-400 p-2">
         <Text className="text-[20px]">⇦</Text>
         <TextInput
           className="max-w-3xl h-8 rounded-md px-2 bg-white"

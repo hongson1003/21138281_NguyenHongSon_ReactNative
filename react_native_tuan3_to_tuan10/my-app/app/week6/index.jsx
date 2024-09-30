@@ -1,11 +1,26 @@
 import { FlatList, Text, View } from 'react-native';
 import productJson from '@/assets/data/product.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProductItem from '../../components/week6/productItem';
 import { Link } from 'expo-router';
 
 const Home = () => {
-  const [data, setData] = useState(productJson);
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const res = await fetch('http://localhost:3000/');
+      const data = await res.json();
+      setData(data);
+    } catch (error) {
+      console.log('🚀 ~ fetchData ~ error:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <View className="flex-1">
       <View className="flex-row justify-between bg-blue-200 p-2">
