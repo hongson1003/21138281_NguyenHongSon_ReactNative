@@ -1,33 +1,36 @@
 {
-  "name": "21138281_nguyenhongson_reactnative",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "test:#1:p1:t1": "jest --testPathPattern=#1.p1.t1.test.js",
-    "test:#2:p1:t1": "jest --testPathPattern=#2.p1.t1.test.js",
-    "test:#3:p1:t1": "jest --testPathPattern=#3.p1.t1.test.js",
-    "test:#4:p1:t1": "jest --testPathPattern=#4.p1.t1.test.js",
-    "test:#1.p2.t1": "jest --testPathPattern=#1.p2.t1.test.js",
-    "test:#2.p2.t1": "jest --testPathPattern=#2.p2.t1.test.js",
-    "test:#3.p2.t1": "jest --testPathPattern=#3.p2.t1.test.js",
-    "test:#4.p2.t1": "jest --testPathPattern=#4.p2.t1.test.js",
-    "test:p3": "jest --testPathPattern=p3.test.js",
-    "test:p4": "jest --testPathPattern=resetGame.test.js",
-    "test:#1:p5": "jest --testPathPattern=#1.p5.t1.test.js",
-    "test:#2:p5": "jest --testPathPattern=#2.p5.t1.test.js",
-    "test:#3:p5": "jest --testPathPattern=#3.p5.t1.test.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.0",
-    "jsdom": "^25.0.0"
-  }
+    "name": "21138281_nguyenhongson_reactnative",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "test": "jest",
+        "test:#1:p1:t1": "jest --testPathPattern=#1.p1.t1.test.js",
+        "test:#2:p1:t1": "jest --testPathPattern=#2.p1.t1.test.js",
+        "test:#3:p1:t1": "jest --testPathPattern=#3.p1.t1.test.js",
+        "test:#4:p1:t1": "jest --testPathPattern=#4.p1.t1.test.js",
+        "test:#1.p2.t1": "jest --testPathPattern=#1.p2.t1.test.js",
+        "test:#2.p2.t1": "jest --testPathPattern=#2.p2.t1.test.js",
+        "test:#3.p2.t1": "jest --testPathPattern=#3.p2.t1.test.js",
+        "test:#4.p2.t1": "jest --testPathPattern=#4.p2.t1.test.js",
+        "test:p3": "jest --testPathPattern=p3.test.js",
+        "test:p4": "jest --testPathPattern=resetGame.test.js",
+        "test:#1:p5": "jest --testPathPattern=#1.p5.t1.test.js",
+        "test:#2:p5": "jest --testPathPattern=#2.p5.t1.test.js",
+        "test:#3:p5": "jest --testPathPattern=#3.p5.t1.test.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^29.7.0"
+    },
+    "dependencies": {
+        "@tanstack/react-query": "^5.59.0",
+        "cors": "^2.8.5",
+        "express": "^4.21.0",
+        "jsdom": "^25.0.0",
+        "nodemon": "^3.1.7"
+    }
 }

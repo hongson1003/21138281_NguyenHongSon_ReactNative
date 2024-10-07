@@ -28,12 +28,13 @@ const Home = () => {
 
   const handleOnClickAdd = async () => {
     const id = uuidv4();
+    console.log('🚀 ~ handleOnClickAdd ~ id:', id);
     await fetch('http://localhost:3000/api/v1/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id, ...user }),
+      body: JSON.stringify({ ...user, id: id }),
     });
     refetch();
 
@@ -144,6 +145,7 @@ const Home = () => {
           data={data}
           renderItem={({ item }) => (
             <TouchableOpacity
+              key={item.id}
               onPress={() => {
                 setUser({
                   id: item.id,
