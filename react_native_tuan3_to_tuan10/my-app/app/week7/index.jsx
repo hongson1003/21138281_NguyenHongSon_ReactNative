@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
 import { v4 as uuidv4 } from 'uuid'; // Import hàm v4 từ uuid
 
 const Home = () => {
+  const router = useRouter();
   // Fetch dữ liệu từ API bằng React Query
   const { data, error, isLoading, refetch } = useQuery({
     queryKey: ['users'],
@@ -39,6 +40,7 @@ const Home = () => {
 
   const handleEditUser = async () => {
     const ids = data.map((item) => item.id);
+    const router = useRouter();
     const id = ids[Math.floor(Math.random() * ids.length)];
     const name = 'Edit user ' + id + uuidv4();
     const email = 'edituser' + id + uuidv4() + '@gmail.com';
@@ -118,9 +120,16 @@ const Home = () => {
         />
       </View>
       <View className="h-10 bg-violet-300 justify-center items-center">
-        <Link href={'/week7/input'}>
+        <TouchableOpacity
+          onPress={() => {
+            router.push({
+              pathname: '/input',
+              params: { data: data },
+            });
+          }}
+        >
           <Text className="uppercase">Sang step 2</Text>
-        </Link>
+        </TouchableOpacity>
       </View>
     </View>
   );

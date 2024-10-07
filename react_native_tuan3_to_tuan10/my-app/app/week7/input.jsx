@@ -1,16 +1,22 @@
 import { useQuery } from '@tanstack/react-query';
-import { Link } from 'expo-router';
+import { Link, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
+
 import {
   View,
   Text,
   TouchableOpacity,
   FlatList,
   TextInput,
+  Alert,
 } from 'react-native';
 import { v4 as uuidv4 } from 'uuid'; // Import hàm v4 từ uuid
 
-const Home = () => {
+const Input = () => {
+  const searchParams = useLocalSearchParams();
+  const { data: users } = searchParams;
+  console.log('🚀 ~ Input ~ users:', users);
+
   // Fetch dữ liệu từ API bằng React Query
   const { data, error, isLoading, refetch } = useQuery({
     queryKey: ['users'],
@@ -27,6 +33,10 @@ const Home = () => {
   });
 
   const handleOnClickAdd = async () => {
+    if (user.name === '' || user.email === '') {
+      Alert.alert('Please enter name and email');
+      return;
+    }
     const id = uuidv4();
     console.log('🚀 ~ handleOnClickAdd ~ id:', id);
     await fetch('http://localhost:3000/api/v1/users', {
@@ -172,4 +182,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Input;
